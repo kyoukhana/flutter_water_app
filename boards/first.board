@@ -1,0 +1,112 @@
+{
+    "canvases": [
+        {
+            "x": -402.0,
+            "y": 527.0,
+            "w": 399.0,
+            "h": 808.0,
+            "widget": "const HomePage()",
+            "deps": [
+                "lib/pages/home_page.dart"
+            ]
+        },
+        {
+            "x": 303.0,
+            "y": 310.0,
+            "w": 399.0,
+            "h": 844.0,
+            "widget": "const Empty()",
+            "deps": [
+                "lib/empty.dart"
+            ]
+        },
+        {
+            "x": -159.0,
+            "y": 128.0,
+            "w": 115.0,
+            "h": 94.0,
+            "widget": "const Addwaterbutton()",
+            "deps": [
+                "lib/addwaterbutton.dart"
+            ]
+        },
+        {
+            "x": 303.0,
+            "y": 151.0,
+            "w": 328.0,
+            "h": 71.0,
+            "widget": "const Waterlog()",
+            "deps": [
+                "lib/waterlog.dart"
+            ]
+        },
+        {
+            "x": 755.0,
+            "y": 310.0,
+            "w": 374.0,
+            "h": 436.0,
+            "widget": "const Settings()",
+            "deps": [
+                "lib/settings.dart"
+            ]
+        },
+        {
+            "x": 900.0,
+            "y": 88.0,
+            "w": 318.0,
+            "h": 99.0,
+            "widget": "const Dailyprogress()",
+            "deps": [
+                "lib/dailyprogress.dart"
+            ]
+        },
+        {
+            "x": 1218.0,
+            "y": 294.0,
+            "w": 330.0,
+            "h": 500.0,
+            "widget": "const History()",
+            "deps": [
+                "lib/history.dart"
+            ]
+        },
+        {
+            "x": 753.5,
+            "y": 794.0,
+            "w": 377.0,
+            "h": 274.0,
+            "widget": "const Setdailytarget()",
+            "deps": [
+                "lib/setdailytarget.dart"
+            ]
+        },
+        {
+            "x": 755.0,
+            "y": 1093.0,
+            "w": 399.0,
+            "h": 255.0,
+            "widget": "const Setreminders()",
+            "deps": [
+                "lib/setreminders.dart"
+            ]
+        },
+        {
+            "x": 1573.0,
+            "y": 451.0,
+            "w": 419.0,
+            "h": 274.0,
+            "widget": "AlertDialog(title:Text('How much did you drink?',style:Theme.of(context).textTheme.labelLarge,),content:const Sliderwater(),actions:[CustomButton(onPressed:(){\n},color:Theme.of(context).colorScheme.onPrimary,child:Text('Confirm',style:TextStyle(color:Theme.of(context).colorScheme.onSurface,backgroundColor:const Color(0x00ffffff)),),)],)",
+            "deps": [
+                "lib/sliderwater.dart"
+            ]
+        },
+        {
+            "x": 1645.0,
+            "y": 337.0,
+            "widget": "const Sliderwater()",
+            "deps": [
+                "lib/sliderwater.dart"
+            ]
+        }
+    ]
+}
