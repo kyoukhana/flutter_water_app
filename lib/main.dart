@@ -1,7 +1,8 @@
-import 'package:flutter/material.dart';
-import 'package:nowa_runtime/nowa_runtime.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:nowa_runtime/nowa_runtime.dart';
+import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:water_reminder_app/water_state.dart';
 import 'package:water_reminder_app/globals/app_state.dart';
 import 'package:water_reminder_app/pages/home_page.dart';
 
@@ -18,19 +19,20 @@ main() async {
 
 @NowaGenerated({'visibleInNowa': false})
 class MyApp extends StatelessWidget {
-  @NowaGenerated()
+  @NowaGenerated({'loader': 'auto-constructor'})
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider<AppState>(
-      create: (context) => AppState(),
-      builder: (context, child) => MaterialApp(
-        theme: AppState.of(context).theme,
-        initialRoute: 'HomePage',
-        routes: {
-          'HomePage': (context) => const HomePage(),
-        },
+    return ChangeNotifierProvider<WaterState>(
+      create: (context) => WaterState(),
+      child: ChangeNotifierProvider<AppState>(
+        create: (context) => AppState(),
+        builder: (context, child) => MaterialApp(
+          theme: AppState.of(context).theme,
+          initialRoute: 'HomePage',
+          routes: {'HomePage': (context) => const HomePage()},
+        ),
       ),
     );
   }

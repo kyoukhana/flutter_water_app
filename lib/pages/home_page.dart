@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nowa_runtime/nowa_runtime.dart';
-import 'package:water_reminder_app/empty.dart';
+import 'package:water_reminder_app/water_state.dart';
 import 'package:water_reminder_app/addwaterbutton.dart';
 import 'package:water_reminder_app/dividr.dart';
 
@@ -151,13 +151,18 @@ class HomePage extends StatelessWidget {
                         children: [
                           Positioned(
                             top: 78.5,
-                            left: 47.1015625,
+                            left: 0.0,
+                            right: 0.0,
                             child: Text(
-                              '1000ml',
+                              WaterState.of(context)
+                                      .todayWaterIntake!
+                                      .toString() +
+                                  'ml',
                               style: TextStyle(
                                   color:
                                       Theme.of(context).colorScheme.onPrimary,
                                   fontSize: 30.0),
+                              textAlign: TextAlign.center,
                             ),
                           ),
                           Positioned(
@@ -200,15 +205,17 @@ class HomePage extends StatelessWidget {
                     const FlexSizedBox(
                       width: 115.0,
                       height: 94.0,
-                      child: Addwaterbutton(),
+                      child: Addwaterbutton(
+                        cardAmount: 200,
+                      ),
                     ),
                     const FlexSizedBox(
                       width: 115.0,
                       height: 94.0,
                       child: Addwaterbutton(
-                        param: '200 ml',
                         param1:
                             'https://ztqicyaiquupgbfkfvbj.supabase.co/storage/v1/object/public/looseFiles//glass-water-1.png',
+                        cardAmount: 200,
                       ),
                     )
                   ],
@@ -238,13 +245,14 @@ class HomePage extends StatelessWidget {
                       child: Addwaterbutton(
                         param1:
                             'https://ztqicyaiquupgbfkfvbj.supabase.co/storage/v1/object/public/looseFiles//glass-water-3.png',
+                        cardAmount: 30,
                       ),
                     ),
                     const FlexSizedBox(
                       width: 115.0,
                       height: 94.0,
                       child: Addwaterbutton(
-                        param: '500ml',
+                        cardAmount: 500,
                       ),
                     )
                   ],
