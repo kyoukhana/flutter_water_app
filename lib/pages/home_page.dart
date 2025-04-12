@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nowa_runtime/nowa_runtime.dart';
 import 'package:water_reminder_app/water_state.dart';
 import 'package:water_reminder_app/addwaterbutton.dart';
+import 'package:water_reminder_app/todays_history.dart';
 import 'package:water_reminder_app/dividr.dart';
 
 @NowaGenerated({'auto-width': 399.0})
@@ -303,13 +304,19 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const FlexSizedBox(
+                  FlexSizedBox(
                     width: null,
                     height: null,
-                    child: Icon(
-                      IconData(60030, fontFamily: 'MaterialIcons'),
-                      color: Color(0xff000000),
-                      size: 36.0,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => const TodaysHistory()));
+                      },
+                      child: const Icon(
+                        IconData(60030, fontFamily: 'MaterialIcons'),
+                        color: Color(0xff000000),
+                        size: 36.0,
+                      ),
                     ),
                   )
                 ],

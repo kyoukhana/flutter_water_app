@@ -3,9 +3,9 @@ import 'package:nowa_runtime/nowa_runtime.dart';
 import 'package:water_reminder_app/waterlog.dart';
 
 @NowaGenerated({'auto-width': 399.0})
-class Empty extends StatelessWidget {
+class TodaysHistory extends StatelessWidget {
   @NowaGenerated({'loader': 'auto-constructor'})
-  const Empty({super.key});
+  const TodaysHistory({super.key});
 
   @override
   Widget build(BuildContext context) {

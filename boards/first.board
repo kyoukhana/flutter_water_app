@@ -15,9 +15,9 @@
             "y": 485.0,
             "w": 399.0,
             "h": 844.0,
-            "widget": "const Empty()",
+            "widget": "const TodaysHistory()",
             "deps": [
-                "lib/empty.dart"
+                "lib/todays_history.dart"
             ]
         },
         {
