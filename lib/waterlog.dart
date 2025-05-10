@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:water_reminder_app/water_log_entry.dart';
 import 'package:nowa_runtime/nowa_runtime.dart';
 
 @NowaGenerated({'auto-width': 328.0, 'auto-height': 71.0})
 class Waterlog extends StatelessWidget {
   @NowaGenerated({'loader': 'auto-constructor'})
-  const Waterlog({super.key});
+  const Waterlog({this.logEntry, this.deleteCallback, super.key});
+
+  final WaterLogEntry? logEntry;
+
+  final void Function()? deleteCallback;
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +52,7 @@ class Waterlog extends StatelessWidget {
                   ),
                   FlexSizedBox(
                     width: null,
-                    height: null,
+                    height: 37.0,
                     child: NFlex(
                       direction: Axis.vertical,
                       spacing: 0.0,
@@ -59,7 +64,9 @@ class Waterlog extends StatelessWidget {
                           width: null,
                           height: null,
                           child: Text(
-                            '200ml',
+                            logEntry != null
+                                ? logEntry!.amount!.toString() + ' ml'
+                                : 'Amount not Found',
                             style: TextStyle(fontWeight: FontWeight.w500),
                           ),
                         ),
@@ -67,7 +74,13 @@ class Waterlog extends StatelessWidget {
                           width: null,
                           height: null,
                           child: Text(
-                            '11:00',
+                            logEntry != null
+                                ? logEntry!.date!.hour.toString() +
+                                    ':' +
+                                    logEntry!.date!.minute.toString() +
+                                    ':' +
+                                    logEntry!.date!.second.toString()
+                                : 'Time not Found',
                             style: TextStyle(
                               fontWeight: FontWeight.w500,
                               fontSize: 12.0,
@@ -81,13 +94,16 @@ class Waterlog extends StatelessWidget {
                 ],
               ),
             ),
-            const FlexSizedBox(
+            FlexSizedBox(
               width: null,
               height: null,
-              child: Icon(
-                IconData(59575, fontFamily: 'MaterialIcons'),
-                color: Color(0x56000000),
-                size: 22.0,
+              child: GestureDetector(
+                onTap: deleteCallback,
+                child: const Icon(
+                  IconData(59575, fontFamily: 'MaterialIcons'),
+                  color: Color(0x56000000),
+                  size: 22.0,
+                ),
               ),
             )
           ],

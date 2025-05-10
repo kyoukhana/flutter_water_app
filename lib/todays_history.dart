@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nowa_runtime/nowa_runtime.dart';
+import 'package:water_reminder_app/water_state.dart';
+import 'package:water_reminder_app/water_log_entry.dart';
 import 'package:water_reminder_app/waterlog.dart';
 
 @NowaGenerated({'auto-width': 399.0})
@@ -21,8 +23,18 @@ class TodaysHistory extends StatelessWidget {
               width: double.infinity,
               flex: 1,
               child: ListView.separated(
-                itemCount: 3,
-                itemBuilder: (context, index) => const Waterlog(),
+                itemCount: WaterState.of(context).todaysLogs!.length,
+                itemBuilder: (context, index) {
+                  final WaterLogEntry element =
+                      WaterState.of(context).todaysLogs![index];
+                  return Waterlog(
+                    logEntry: element,
+                    deleteCallback: () {
+                      WaterState.of(context, listen: false)
+                          .deleteEntry(item: element);
+                    },
+                  );
+                },
                 separatorBuilder: (context, index) => const SizedBox(
                   height: 16.0,
                   width: 20.0,

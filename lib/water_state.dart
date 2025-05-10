@@ -15,6 +15,12 @@ class WaterState extends ChangeNotifier {
 
   List<WaterLogEntry>? todaysLogs = [];
 
+  void deleteEntry({WaterLogEntry? item = const WaterLogEntry()}) {
+    todaysLogs?.remove(item!);
+    todayWaterIntake = todayWaterIntake! - item!.amount!;
+    notifyListeners();
+  }
+
   void addWaterLog({int? amount = 0}) {
     final waterintake = WaterLogEntry(amount: amount, date: DateTime.now());
     todaysLogs?.insert(0, waterintake);

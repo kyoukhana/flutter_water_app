@@ -21,6 +21,7 @@ class Addwaterbutton extends StatelessWidget {
       onTap: () {
         WaterState.of(context, listen: false).addWaterLog(amount: cardAmount);
       },
+      trackpadScrollToScaleFactor: const Offset(0.0, 0.0),
       child: Material(
         color: Theme.of(context).colorScheme.primary,
         shape: RoundedRectangleBorder(

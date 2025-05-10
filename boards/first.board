@@ -1,8 +1,8 @@
 {
     "canvases": [
         {
-            "x": 395.0,
-            "y": 702.0,
+            "x": -965.0,
+            "y": 917.0,
             "w": 399.0,
             "h": 808.0,
             "widget": "const HomePage()",
@@ -11,8 +11,8 @@
             ]
         },
         {
-            "x": 1100.0,
-            "y": 485.0,
+            "x": -259.0,
+            "y": 700.0,
             "w": 399.0,
             "h": 844.0,
             "widget": "const TodaysHistory()",
@@ -21,8 +21,8 @@
             ]
         },
         {
-            "x": 638.0,
-            "y": 303.0,
+            "x": -721.0,
+            "y": 518.0,
             "w": 115.0,
             "h": 94.0,
             "widget": "const Addwaterbutton()",
@@ -31,8 +31,8 @@
             ]
         },
         {
-            "x": 1100.0,
-            "y": 326.0,
+            "x": -259.0,
+            "y": 541.0,
             "w": 328.0,
             "h": 71.0,
             "widget": "const Waterlog()",
@@ -41,8 +41,8 @@
             ]
         },
         {
-            "x": 1552.0,
-            "y": 485.0,
+            "x": 193.0,
+            "y": 700.0,
             "w": 374.0,
             "h": 436.0,
             "widget": "const Settings()",
@@ -51,8 +51,8 @@
             ]
         },
         {
-            "x": 1697.0,
-            "y": 263.0,
+            "x": 338.0,
+            "y": 478.0,
             "w": 318.0,
             "h": 99.0,
             "widget": "const Dailyprogress()",
@@ -61,8 +61,8 @@
             ]
         },
         {
-            "x": 2015.0,
-            "y": 469.0,
+            "x": 656.0,
+            "y": 684.0,
             "w": 330.0,
             "h": 500.0,
             "widget": "const History()",
@@ -71,8 +71,8 @@
             ]
         },
         {
-            "x": 1550.5,
-            "y": 969.0,
+            "x": 191.5,
+            "y": 1184.0,
             "w": 377.0,
             "h": 274.0,
             "widget": "const Setdailytarget()",
@@ -81,8 +81,8 @@
             ]
         },
         {
-            "x": 1552.0,
-            "y": 1268.0,
+            "x": 193.0,
+            "y": 1483.0,
             "w": 399.0,
             "h": 255.0,
             "widget": "const Setreminders()",
@@ -91,8 +91,8 @@
             ]
         },
         {
-            "x": 2370.0,
-            "y": 626.0,
+            "x": 1011.0,
+            "y": 841.0,
             "w": 419.0,
             "h": 274.0,
             "widget": "AlertDialog(title:Text('How much did you drink?',style:Theme.of(context).textTheme.labelLarge,),content:const Sliderwater(),actions:[CustomButton(onPressed:(){\n},color:Theme.of(context).colorScheme.onPrimary,child:Text('Confirm',style:TextStyle(color:Theme.of(context).colorScheme.onSurface,backgroundColor:const Color(0x00ffffff)),),)],)",
@@ -101,8 +101,8 @@
             ]
         },
         {
-            "x": 2442.0,
-            "y": 512.0,
+            "x": 1083.0,
+            "y": 727.0,
             "widget": "const Sliderwater()",
             "deps": [
                 "lib/sliderwater.dart"

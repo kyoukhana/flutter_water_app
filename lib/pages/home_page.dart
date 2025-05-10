@@ -207,7 +207,7 @@ class HomePage extends StatelessWidget {
                       width: 115.0,
                       height: 94.0,
                       child: Addwaterbutton(
-                        cardAmount: 200,
+                        cardAmount: 100,
                       ),
                     ),
                     const FlexSizedBox(
@@ -246,7 +246,7 @@ class HomePage extends StatelessWidget {
                       child: Addwaterbutton(
                         param1:
                             'https://ztqicyaiquupgbfkfvbj.supabase.co/storage/v1/object/public/looseFiles//glass-water-3.png',
-                        cardAmount: 30,
+                        cardAmount: 300,
                       ),
                     ),
                     const FlexSizedBox(
